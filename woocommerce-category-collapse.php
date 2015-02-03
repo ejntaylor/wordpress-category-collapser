@@ -2,9 +2,9 @@
 /**
  * Plugin Name: WooCommerce Category Collapser
  * Plugin URI: http://raison.co/woocommerce-category-collapse/
- * Description: I collapse category descriptions
+ * Description: I collapse WooCommerce category descriptions
  * Version: 1.0.0
- * Author: Matty
+ * Author: Raison
  * Author URI: http://raison.co
  * Requires at least: 4.0.0
  * Tested up to: 4.0.0
@@ -14,7 +14,8 @@
  *
  * @package Category_Collapse
  * @category Core
- * @author Matty
+ * @author Raison
+   @GitHub Plugin URI: https://github.com/raisonon/woocommerce-category-collapser
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
