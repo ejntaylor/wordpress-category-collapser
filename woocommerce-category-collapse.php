@@ -21,6 +21,9 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
+
+
+
 // load collapser JS
 
 function register_cat_collapser_script() {
@@ -44,41 +47,53 @@ add_action( 'wp_enqueue_scripts', 'category_collapser_css', 30 );
 
 
 
-// Add Collapser Params
+// simple settings
 
-function collapser_js() {
 
-?>
 
-<script>
-	jQuery(function ($) {
 
-		 $('.term-description').collapser({
-			mode: 'lines',
-			truncate: 2,
-		});
-	}); // jQuery(funtion...	
-	
-</script>
 
-<?php	
-}
+/*
+  * Simple Settings
+  * https://github.com/clifgriffin/wordpress-simple-settings/
+*/
 
-// conditional
 
-add_action('template_redirect','conditional_functions');
 
-function conditional_functions() {
 
-	if (is_product_category()) {
+// Include the framework only if another plugin has not already done so
+if ( ! class_exists('WordPress_SimpleSettings') )
+	require('classes/wordpress-simple-settings.php'); 
+
+class ccollapsePlugin extends WordPress_SimpleSettings {
+	var $prefix = 'ccollapse'; // this is super recommended
+
+	function __construct() {
+		parent::__construct(); // this is required
+
+
+		register_activation_hook(__FILE__, array($this, 'activate') );
+	}
+
+	function activate() {
+		$this->add_setting('ccollapse_truncate_mode', 'lines');
+		$this->add_setting('ccollapse_truncate_amount', '2');
+		$this->add_setting('ccollapse_truncate_speed', 'medium');
 		
-	add_action('wp_head','collapser_js');	
-	add_action('wp_head', 'register_cat_collapser_script');
-}
-	
+	}
 }
 
-	
-	
+$ccollapsePlugin = new ccollapsePlugin();
+
+
+
+
+// Includes
+
+
+
+include_once('includes/settings.php');
+include_once('includes/main.php');
+
 
 ?>
