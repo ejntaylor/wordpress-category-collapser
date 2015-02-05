@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: WooCommerce Category Collapser
- * Plugin URI: http://raison.co/woocommerce-category-collapse/
- * Description: I collapse WooCommerce category descriptions
+ * Plugin Name: Category Collapser
+ * Plugin URI: http://raison.co/category-collapse/
+ * Description: I collapse category descriptions
  * Version: 1.0.0
  * Author: Raison
  * Author URI: http://raison.co
@@ -15,7 +15,7 @@
  * @package Category_Collapse
  * @category Core
  * @author Raison
-   @GitHub Plugin URI: https://github.com/raisonon/woocommerce-category-collapser
+   @GitHub Plugin URI: https://github.com/raisonon/category-collapser
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
