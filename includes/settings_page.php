@@ -34,7 +34,6 @@ global $ccollapsePlugin; // we'll need this below
 					<td>
 						<label>
 							<input type="text" name="<?php echo $ccollapsePlugin->get_field_name('ccollapse_truncate_amount'); ?>" value="<?php echo $ccollapsePlugin->get_setting('ccollapse_truncate_amount'); ?>" /><br />
-							This array is so clutch.
 						</label>
 					</td>
 				</tr>
