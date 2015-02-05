@@ -1,5 +1,5 @@
-=== WooCommerce Category Collapser===
-Contributors:
+=== WordPress Category Collapser===
+Contributors: Elliot Taylor, Vaakash, ClifGriffen
 Donate link:
 Tags:
 Requires at least: 4.0.0
@@ -13,13 +13,15 @@ Based on https://github.com/vaakash/jquery-collapser
 
 == Description ==
 
-Hey there! I'm your new starter plugin.
+jQuery show / hide collapser for archive description text. Love archive description text for SEO goodness, but don't want it hogging the page. Use this plugin to truncate the text and provide a button to expand the text.
 
-Looking for a helping hand? [View plugin documentation](http://domain.com/).
+Settings include option to choose how to truncate. For instance how many words or how many lines.
+
+Looking for a helping hand? [View plugin documentation](https://github.com/raisonon/wordpress-category-collapser).
 
 == Usage ==
 
-Place some text here, explaining how to use this plugin. Keep it clear and easy to read (short sentences).
+Works out of the box. Head to Settings > Category Collapser for options.
 
 == Installation ==
 
