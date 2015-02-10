@@ -34,7 +34,23 @@ add_action('template_redirect','conditional_functions');
 
 function conditional_functions() {
 
-	if (is_product_category() || is_product_tag() || is_archive() ) {
+if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+		if (is_product_category() || is_product_tag() ) {
+			$cat_display = true;
+		}
+	
+	}
+	
+elseif ( is_archive() ) {
+			$cat_display = true;	
+	}
+	
+else {
+			$cat_display = false;		
+}
+	
+
+if ($cat_display == true) {	
 
 	add_action('wp_head','collapser_js');	
 	add_action('wp_head', 'register_cat_collapser_script');
